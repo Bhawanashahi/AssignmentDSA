@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AssignmentDSA.iml" filepath="$PROJECT_DIR$/.idea/AssignmentDSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSA/DSA.iml" filepath="$PROJECT_DIR$/DSA/DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch_processing/batch_processing.iml" filepath="$PROJECT_DIR$/batch_processing/batch_processing.iml" />
+    </modules>
+  </component>
+</project>

@@ -24,13 +24,16 @@ public class HuffmanEncoding {
         String text = "Bhawana";
         Map<Character, Integer> freq = new HashMap<>();
 
+        // Looping through the input text to calculate the frequency of each character
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             freq.put(c, freq.getOrDefault(c, 0) + 1);
         }
 
+        // Creating a priority queue to hold the HuffmanNodes
         PriorityQueue<HuffmanNode> pq = new PriorityQueue<>(new MyComparator());
 
+        // Creating a HuffmanNode for each character and adding it to the priority queue
         for (Map.Entry<Character, Integer> entry : freq.entrySet()) {
             HuffmanNode node = new HuffmanNode();
             node.c = entry.getKey();
@@ -40,6 +43,7 @@ public class HuffmanEncoding {
             pq.add(node);
         }
 
+        // Combining the two nodes with the lowest frequency into a new node, and adding it back to the priority queue
         while (pq.size() > 1) {
             HuffmanNode x = pq.peek();
             pq.poll();
@@ -53,24 +57,33 @@ public class HuffmanEncoding {
             pq.add(z);
         }
 
+        // Getting the root node of the Huffman tree
         HuffmanNode root = pq.peek();
 
+        // Creating a map to store the Huffman codes for each character
         Map<Character, String> codes = new HashMap<>();
+        // Encoding each character by traversing the Huffman tree
         encode(root, "", codes);
 
+        // Printing the original text
         System.out.println("Original text: " + text);
+        // Building the encoded text by replacing each character with its Huffman code
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             sb.append(codes.get(c));
         }
         String encodedText = sb.toString();
+        // Printing the encoded text
         System.out.println("Encoded text: " + encodedText);
 
+        // Decoding the encoded text using the Huffman tree
         String decodedText = decode(root, encodedText);
+        // Printing the decoded text
         System.out.println("Decoded text: " + decodedText);
     }
 
+    // A recursive function to traverse the Huffman tree and assign codes to each character
     public static void encode(HuffmanNode root, String str, Map<Character, String> codes) {
         if (root == null) {
             return;
@@ -81,6 +94,9 @@ public class HuffmanEncoding {
         encode(root.left, str + "0", codes);
         encode(root.right, str + "1", codes);
     }
+
+// A function to decode
+
 
     public static String decode(HuffmanNode root, String str) {
         StringBuilder sb = new StringBuilder();
