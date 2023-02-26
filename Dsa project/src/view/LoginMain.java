@@ -75,20 +75,7 @@ public class LoginMain extends JFrame implements ActionListener {
     }
 
 
-    public void Username() {
-        lbl = new JLabel("Email");
-        lbl.setFont(new Font("Times New Roman", Font.BOLD, 16));
-        lbl.setForeground(Color.BLACK);
-        lbl.setBounds(300, 250, 100, 30);
-        add(lbl);
-    }
 
-    public void UsernameText() {
-        jt1 = new JTextField();
-        jt1.setFont(new Font("Times New Roman", Font.BOLD, 16));
-        jt1.setBounds(440, 250, 200, 30);
-        add(jt1);
-    }
 
     public void Password() {
         lbl = new JLabel("Password");
