@@ -49,14 +49,17 @@ public class AddDependency extends JFrame implements ActionListener {
     }
     void addDependencyButton(){
         adddependencybutton = new Base.Button("Insert", 18, 150, 340, 180, 40);
+        adddependencybutton.setForeground(Color.decode("#A020F0"));
         add(adddependencybutton);
     }
     void labels() {
         label= new Base.Label("Dependency Name","Poppins",18,10,160,100,40);
+        label.setForeground(Color.decode("#A020F0"));
         add(label);
     }
     void Field(){
         field= new Base.TextField("Enter the dependency",18,10,200,450,40);
+        field.setForeground(Color.decode("#A020F0"));
         add(field);
     }
     void handleAction(){

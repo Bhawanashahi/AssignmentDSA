@@ -67,7 +67,7 @@ public class JobDesc extends JFrame implements ActionListener {
 
     void addLabel(){
         label=new Base.Label("You can only map existing dependencies","Poppins",20,10,60,400,50);
-        label.setForeground(Color.red);
+        label.setForeground(Color.decode("#A020F0"));
         add(label);
     }
     void showDependencies(){
@@ -81,15 +81,18 @@ public class JobDesc extends JFrame implements ActionListener {
     }
     void dependencyButton(){
         dependencybutton = new Base.Button( "Add Dependency ",18, 30, 300, 300, 50);
+        dependencybutton.setForeground(Color.decode("#A020F0"));
         add(dependencybutton);
     }
     void mapDependency(){
         mapbutton = new Base.Button( "Map Dependency",18, 30, 360, 300, 50);
+        mapbutton.setForeground(Color.decode("#A020F0"));
         add(mapbutton);
     }
 
     void scheduleButton(){
         schedulebutton = new Base.Button( "Show Schedule",18, 30, 420, 300, 50);
+        schedulebutton.setForeground(Color.decode("#A020F0"));
 //        schedulebutton.setBackground(Color.WHITE);
         add(schedulebutton);
     }

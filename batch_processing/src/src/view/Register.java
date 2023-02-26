@@ -20,7 +20,7 @@ public class Register extends JFrame implements ActionListener {
 
     public Register() {
         uI();
-        banner();
+        //banner();
 
         // buttons
         submitButton();
@@ -53,12 +53,14 @@ public class Register extends JFrame implements ActionListener {
 
     public void firstname() {
         fnamefield = new Base.TextField("First Name", 17, 41, 315, 190, 45);
+        fnamefield.setForeground(Color.decode("#A020F0"));
         add(fnamefield);
     }
 
     // last name text field
     public void lastname() {
         lnamefield = new Base.TextField("Last Name", 17, 241, 315, 190, 45);
+        lnamefield.setForeground(Color.decode("#A020F0"));
         add(lnamefield);
     }
 
@@ -66,18 +68,21 @@ public class Register extends JFrame implements ActionListener {
     // email text field
     public void email() {
         emailfield = new Base.TextField("Email", 17, 41, 370, 390, 45);
+        emailfield.setForeground(Color.decode("#A020F0"));
         add(emailfield);
     }
 
     //  password text filed
     public void password() {
         passwordfield = new Base.PasswordField("Password", 17, 41, 425, 347, 45, showpasswordbutton);
+        passwordfield.setForeground(Color.decode("#A020F0"));
         add(passwordfield);
     }
 
     // confirm password text field
     public void confirmPassword() {
         cpasswordfield = new Base.PasswordField("Confirm Password", 17, 41, 480, 347, 45, show);
+        cpasswordfield.setForeground(Color.decode("#A020F0"));
         add(cpasswordfield);
     }
 
@@ -89,7 +94,7 @@ public class Register extends JFrame implements ActionListener {
         signupbutton.setAlignmentY(CENTER_ALIGNMENT);
         signupbutton.setBounds(242, 228, 225, 70);
         signupbutton.setBackground(Color.decode("#FFFFFF"));
-        signupbutton.setForeground(Color.decode("#202A44"));
+        signupbutton.setForeground(Color.decode("#A020F0"));
         signupbutton.setBorder(BorderFactory.createMatteBorder(0, 0, 4, 0, Color.decode("#202A44")));
         add(signupbutton);
     }
@@ -116,7 +121,7 @@ public class Register extends JFrame implements ActionListener {
         loginbutton.setAlignmentY(CENTER_ALIGNMENT);
         loginbutton.setBounds(8, 228, 225, 70);
         loginbutton.setBackground(Color.decode("#FFFFFF"));
-        loginbutton.setForeground(Color.decode("#202A44"));
+        loginbutton.setForeground(Color.decode("#A020F0"));
         loginbutton.setBorderPainted(false);
         add(loginbutton);
     }
@@ -124,14 +129,15 @@ public class Register extends JFrame implements ActionListener {
     // top signup button
     public void submitButton() {
         submitbutton = new Base.Button("Signup", 18, 190, 540, 80, 40);
+        submitbutton.setForeground(Color.decode("#A020F0"));
         add(submitbutton);
     }
 
-    public void banner() {
-        image = new JLabel(new ImageIcon("public\\banner.png"));
-        image.setBounds(2, 2, 471, 218);
-        add(image);
-    }
+//    public void banner() {
+//        image = new JLabel(new ImageIcon("public\\banner.png"));
+//        image.setBounds(2, 2, 471, 218);
+//        add(image);
+//    }
 
     public void handleAction() {
         loginbutton.addActionListener(this);

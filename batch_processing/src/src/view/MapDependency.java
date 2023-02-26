@@ -42,7 +42,7 @@ public class MapDependency extends JFrame implements ActionListener {
     }
     void returnButton(){
         returnbutton = new Base.Button( "Back",18, 10, 10, 90, 40);
-        returnbutton.setForeground(Color.decode("#202A44"));
+        returnbutton.setForeground(Color.decode("#A020F0"));
         returnbutton.setBackground(Color.WHITE);
         add(returnbutton);
     }
@@ -54,14 +54,17 @@ public class MapDependency extends JFrame implements ActionListener {
     }
     void parentField(){
         parentfield=new Base.TextField("Enter the parent",16,10,100,400,40);
+        parentfield.setForeground(Color.decode("#A020F0"));
         add(parentfield);
     }
     void childField(){
         childfield=new Base.TextField("Enter the child",16,10,200,400,40);
+        childfield.setForeground(Color.decode("#A020F0"));
         add(childfield);
     }
     void addButton(){
         addbutton= new Base.Button("Add",16,50,300,90,50);
+        addbutton.setForeground(Color.decode("#A020F0"));
         add(addbutton);
     }
     void handleAction(){

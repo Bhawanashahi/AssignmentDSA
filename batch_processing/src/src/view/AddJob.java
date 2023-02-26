@@ -48,14 +48,17 @@ public class AddJob extends JFrame implements ActionListener {
     }
     void addJobButton(){
         addJobbutton = new Base.Button("Insert", 18, 150, 340, 180, 40);
+        addJobbutton.setForeground(Color.decode("#A020F0"));
         add(addJobbutton);
     }
     void labels() {
         joblabel= new Base.Label("Job Name","Poppins",18,10,160,100,40);
+        joblabel.setForeground(Color.decode("#A020F0"));
         add(joblabel);
     }
     void jobField(){
         jobfield= new Base.TextField("Enter the job",18,10,200,450,40);
+        jobfield.setForeground(Color.decode("#A020F0"));
         add(jobfield);
     }
     void handleAction(){

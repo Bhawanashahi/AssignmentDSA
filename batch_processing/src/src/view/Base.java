@@ -38,7 +38,7 @@ public class Base {
                 setAlignmentX(CENTER_ALIGNMENT);
                 setAlignmentY(CENTER_ALIGNMENT);
                 setBounds(x,y,width,height);
-                setBackground(Color.decode("#202A44"));
+                setBackground(Color.decode("#A020FO"));
                 setForeground(Color.white);
                 setBorder(lineBorder);
             }
@@ -52,7 +52,8 @@ public class Base {
             setAlignmentX(CENTER_ALIGNMENT);
             setAlignmentY(CENTER_ALIGNMENT);
             setBounds(x,y,width,height);
-            setBackground(Color.GRAY);
+            setBackground(Color.decode("#A020FO"));
+//            setBackground(Color.GRAY);
             setEnabled(false);
         }
     }
@@ -61,7 +62,7 @@ public class Base {
             //            It sets all the properties required for the basic labels.
             Label(String text, String fontName, int fontSize, int x, int y, int width, int height){
                 setText(text);
-                setForeground(Color.decode("#202A44"));
+                setForeground(Color.decode("#A020F0"));
                 setFont(new Font(fontName,Font.BOLD,fontSize));
                 setBounds(x,y,width,height);
             }
@@ -77,7 +78,7 @@ public class Base {
 
         public static class TextField extends JTextField {
             //            It sets all the properties required for the basic text fields.
-            LineBorder lineBorder = new LineBorder(Color.decode("#202A44"), 2, true);
+            LineBorder lineBorder = new LineBorder(Color.decode("#A020F0"), 2, true);
 
             public TextField(String placeholder, int fontSize, int x, int y, int width, int height) {
                 setText(placeholder);
@@ -93,14 +94,14 @@ public class Base {
                     public void focusGained(FocusEvent e) {
                         if (getText().equals(placeholder)) {
                             setText("");
-                            setForeground(Color.decode("#202A44"));
+                            setForeground(Color.decode("#A020F0"));
                         }
                     }
 
                     @Override
                     public void focusLost(FocusEvent e) {
                         if (getText().isEmpty()) {
-                            setForeground(Color.decode("#202A44"));
+                            setForeground(Color.decode("#A020F0"));
                             setText(placeholder);
                         }
                     }
@@ -111,7 +112,7 @@ public class Base {
                 setText(text);
                 setFont(new Font("Poppins", Font.PLAIN, 16));
                 setBounds(x, y, width, height);
-                setForeground(Color.decode("#202A44"));
+                setForeground(Color.decode("#A020F0"));
                 setBorder(lineBorder);
                 setBorder(BorderFactory.createCompoundBorder(
                         getBorder(),
@@ -121,14 +122,14 @@ public class Base {
                     public void focusGained(FocusEvent e) {
                         if (getText().equals(placeholder)) {
                             setText("");
-                            setForeground(Color.decode("#202A44"));
+                            setForeground(Color.decode("#A020F0"));
                         }
                     }
 
                     @Override
                     public void focusLost(FocusEvent e) {
                         if (getText().isEmpty()) {
-                            setForeground(Color.decode("#202A44"));
+                            setForeground(Color.decode("#A020F0"));
                             setText(placeholder);
                         }
                     }
@@ -139,7 +140,7 @@ public class Base {
                 setText(placeholder);
                 setFont(new Font("Poppins", Font.PLAIN, fontSize));
                 setBounds(x, y, width, height);
-                setForeground(Color.decode("#202A44"));
+                setForeground(Color.decode("#A020F0"));
                 setBorder(lineBorder);
                 setBorder(BorderFactory.createCompoundBorder(
                         getBorder(),
@@ -150,7 +151,7 @@ public class Base {
                         if (getText().equals(placeholder)) {
                             nextButton.setEnabled(true);
                             setText("");
-                            setForeground(Color.decode("#202A44"));
+                            setForeground(Color.decode("#A0F020"));
                         }
                     }
 
@@ -168,14 +169,14 @@ public class Base {
 
         static class PasswordField extends JPasswordField {
             //            It sets all the properties required for the password fields.
-            LineBorder lineBorder =new LineBorder(Color.decode("#202A44"), 2, true);
+            LineBorder lineBorder =new LineBorder(Color.decode("#A020F0"), 2, true);
 
             PasswordField(String placeholder,int fontSize, int x, int y, int width, int height, JButton showPasswordButton){
                 setText(placeholder);
                 setEchoChar((char)0);
                 setFont(new Font("Poppins",Font.PLAIN,fontSize));
                 setBounds(x,y,width,height);
-                setForeground(Color.decode("#27445C"));
+                setForeground(Color.decode("#A020F0"));
                 setBorder(lineBorder);
                 setBorder(BorderFactory.createCompoundBorder(
                         getBorder(),
@@ -189,7 +190,7 @@ public class Base {
                             showPasswordButton.setEnabled(true);
                             setEchoChar('\u25cf');
                             setText("");
-                            setForeground(Color.decode("#202A44"));
+                            setForeground(Color.decode("#A020F0"));
                         }
                     }
 

@@ -22,7 +22,7 @@ public class Login extends JFrame implements ActionListener {
 
     public Login() {
         uI();
-        banner();// the banner of the login and register page
+        //banner();// the banner of the login and register page
         signUpButton(); // the button that leads to register page
         logInButton();// the button that leads to login page
         passwordButton(); // the button for showpassword
@@ -47,12 +47,14 @@ public class Login extends JFrame implements ActionListener {
 
     public void email() {
         emailfield = new Base.TextField("Email", 18, 41, 330, 392, 45);
+        emailfield.setForeground(Color.decode("#A020F0"));
         add(emailfield);
     }
 
     //  password text filed
     public void password() {
         passwordfield = new Base.PasswordField("Password", 18, 41, 390, 349, 45, showpasswordbutton);
+        passwordfield.setForeground(Color.decode("#A020F0"));
         add(passwordfield);
     }
 
@@ -69,7 +71,7 @@ public class Login extends JFrame implements ActionListener {
         registerbutton.setAlignmentY(CENTER_ALIGNMENT);
         registerbutton.setBounds(242, 228, 225, 70);
         registerbutton.setBackground(Color.decode("#FFFFFF"));
-        registerbutton.setForeground(Color.decode("#202A44"));
+        registerbutton.setForeground(Color.decode("#A020F0"));
         registerbutton.setBorderPainted(false);
         add(registerbutton);
     }
@@ -81,21 +83,22 @@ public class Login extends JFrame implements ActionListener {
         loginbutton.setAlignmentY(CENTER_ALIGNMENT);
         loginbutton.setBounds(8, 228, 225, 70);
         loginbutton.setBackground(Color.decode("#FFFFFF"));
-        loginbutton.setForeground(Color.decode("#202A44"));
+        loginbutton.setForeground(Color.decode("#A020F0"));
         loginbutton.setBorder(BorderFactory.createMatteBorder(0, 0, 4, 0, Color.decode("#202A44")));
         add(loginbutton);
     }
 
     public void submitButton() {
         submitbutton = new Base.Button("Login", 18, 190, 470, 80, 40);
+        submitbutton.setForeground(Color.decode("#A020F0"));
         add(submitbutton);
     }
 
-    public void banner() {
-        image = new JLabel(new ImageIcon("public\\banner.png"));
-        image.setBounds(2, 2, 471, 218);
-        add(image);
-    }
+//    public void banner() {
+//        image = new JLabel(new ImageIcon("public\\banner.png"));
+//        image.setBounds(2, 2, 471, 218);
+//        add(image);
+//    }
 
     public void handleAction() {
         loginbutton.addActionListener(this);

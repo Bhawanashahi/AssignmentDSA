@@ -42,6 +42,7 @@ public class Homepage extends JFrame implements ActionListener {
     }
     void addTaskButton(){
         addtaskbutton = new Base.Button("+ Add Job", 18, 10, 10, 180, 40);
+        addtaskbutton.setForeground(Color.decode("#A020F0"));
         add(addtaskbutton);
     }
     void tables(){
@@ -57,6 +58,7 @@ public class Homepage extends JFrame implements ActionListener {
     void logoutButton(){
         logoutbutton = new Base.Button( "",18, 420, 10, 60, 40);
         logoutbutton.setIcon(logout);
+        logoutbutton.setForeground(Color.decode("#A020F0"));
         logoutbutton.setBackground(Color.WHITE);
         add(logoutbutton);
     }
