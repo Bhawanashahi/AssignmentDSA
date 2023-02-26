@@ -30,7 +30,7 @@ public class Answer1b {
             adjacencyList.putIfAbsent(y, new ArrayList<>());
             adjacencyList.get(x).add(y);
             adjacencyList.get(y).add(x);
-        }        // remove the edge that connects the failed device to its neighbor
+        }        // remove the edge that connects the failed device
         List<Integer> neighbors = adjacencyList.get(targetDevice);
         neighbors.remove((Integer) targetDevice);
         adjacencyList.put(targetDevice, new ArrayList<>());
